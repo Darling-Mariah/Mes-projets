@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Quiz Game </title>
+    <link rel="stylesheet" href="style.css"> <!--lier le css au html-->  
+
+</head>
+<body>
+
+    <div class="container">
+      <!--fenêtre d'accueil (démarrage du quiz)--> 
+      <div class="screen active" id="start-screen">
+        
+        <h1> Quiz Time</h1>
+         <p> Met à l'épreuve tes connaissances avec ce quiz! </p>
+        <button id="start-btn">Démarrer</button>
+       
+       </div>
+
+       <!--fenêtre du questionnaire-->
+        <div class="screen" id="quiz-screen">
+         
+          <div class="quiz-header">
+           <h2 id="question-text"> Question goes here </h2>
+           <div class="quiz-info">
+             <p> Question <span id="current-question">1</span> sur <span id="max"> 8 </span> </p> <!--span pour cibler le numéro de la question sur cette ligne afin de la faireévoluer apres (la rendre dynamique, question 1, question 2...) -->
+             <p> Score : <span id="score"> 0 </span> </p>
+           </div>
+         
+          </div>
+          
+          <div id="answers-container" class="answers-container">
+            <!--Les bouttons de réponses seront insérés ici depuis le code js après-->            
+          
+          </div>
+
+          <div class="progress-bar">
+
+            <div id="progress" class="progress"></div>
+
+          </div>
+       
+        </div>
+
+       <!--fenêtre des résultats-->
+       <div id="results-screen" class="screen">
+
+            <h1> Résultats </h1>
+            <div class="result-info">
+                <p> Tu as obtenu <span id="final-score"> 0 </span> sur <span id="max-score"> 8 </span></p>
+                <div id="result-message"> Félicitation! </div>
+            </div>
+            <button id="restart-btn"> Recommencer </button>   
+       </div>
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
